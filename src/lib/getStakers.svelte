@@ -56,7 +56,7 @@
 </div>
 
 <style>
-    button:focus {
+/*     button:focus {
         outline: none;
     }
 
@@ -77,5 +77,5 @@
     }
     div {
         padding: 7px;
-    }
+    } */
 </style>
