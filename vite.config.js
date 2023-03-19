@@ -7,6 +7,6 @@ export default defineConfig(({ command }) => {
   const isProduction = command === 'build';
   return {
     plugins: [svelte()],
-    base: isProduction ? '/Dashboard/assets' : '/',
+    base: isProduction ? '/' : '/',
   };
 });
