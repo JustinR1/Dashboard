@@ -1,17 +1,17 @@
-// import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
-
-// export default {
-//   // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
-//   // for more information about preprocessors
-//   preprocess: vitePreprocess(),
-// }
-
-import { vercel } from '@sveltejs/adapter-vercel';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 export default {
-  kit: {
-    // ...
-    adapter: vercel(),
-    // ...
-  },
-};
+  // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
+  // for more information about preprocessors
+  preprocess: vitePreprocess(),
+}
+
+// import { vercel } from '@sveltejs/adapter-vercel';
+
+// export default {
+//   kit: {
+//     // ...
+//     adapter: vercel(),
+//     // ...
+//   },
+// };
