@@ -51,7 +51,7 @@
 <div id="bg">
     <div id="div">
         <h1>Stakers: {stakerCount}</h1>
-        <button on:click={handleClick} on:click={refreshData} class:clicked={clicked}>Update</button>
+<!--         <button on:click={handleClick} on:click={refreshData} class:clicked={clicked}>Update</button> -->
     </div>
 </div>
 
