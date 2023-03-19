@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { phantasmaJS } from "phantasma-ts";
+//     import { phantasmaJS } from "phantasma-ts";
 
     let soulMaster = "";
 
