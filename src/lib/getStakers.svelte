@@ -1,6 +1,10 @@
 <script>
     import { onMount } from "svelte";
 
+        function formatNumberWithCommas(number) {
+        const [integerPart, decimalPart] = number.toString().split(".");
+        return integerPart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
     
     let stakerMembers = 0;
     const getStakerMembers = async () => {
@@ -10,6 +14,8 @@
             );
             let stakers = await response.json();
             stakerMembers = stakers.members.length;
+            stakerMembers = formatNumberWithCommas(stakerMembers);
+
         } catch (error) {
             console.error(error);
         }
