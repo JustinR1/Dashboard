@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "svelte-kit build",
+    "dev": "svelte-kit dev",
+    "start": "svelte-kit start"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
