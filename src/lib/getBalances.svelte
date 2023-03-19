@@ -102,7 +102,6 @@
     {#if displayContent}
     <ul>
             <li><h3>Account name: {accountName}</h3></li>
-            <li>Balances:</li>
             <li>SOUL Stake: {stakeAmount.toLocaleString()}</li>
         <!--Iterating through balances array to find the symbols and amounts -->
         {#each balances as balance}
