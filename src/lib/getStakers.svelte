@@ -10,7 +10,7 @@
     const getStakerMembers = async () => {
         try {
             const response = await fetch(
-                "https://pharpc1.phantasma.io:7077/api/v1/GetOrganizationByName?name=stakers"
+                "http://pharpc1.phantasma.io:7077/api/v1/GetOrganizationByName?name=stakers"
             );
             let stakers = await response.json();
             stakerMembers = stakers.members.length;
