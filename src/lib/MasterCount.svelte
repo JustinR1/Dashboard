@@ -46,7 +46,7 @@
 <div id="bg2">
     <div id="div2">
         <h1>Soul Masters: {soulMaster}</h1>
-        <button on:click={refreshData}>Update</button>
+<!--         <button on:click={refreshData}>Update</button> -->
     </div>
 </div>
 
