@@ -163,6 +163,7 @@
         border: 2px solid #2962ff;
         border-radius: 5px 0 0 5px;
         outline: none;
+        text-align: center;
     }
 
 
