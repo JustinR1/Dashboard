@@ -5,23 +5,29 @@
     let soulMaster = "";
 
     async function getSoulMaster() {
-        let sb = new phantasmaJS.ScriptBuilder();
-        sb.CallContract("stake", "GetMasterCount", []);
-        let script = sb.EndScript();
-        let targetChain = "main";
-
-        let RPC = new phantasmaJS.PhantasmaAPI(
-            "https://pharpc1.phantasma.io:7077/rpc",
-            "https://peers.phantasma.io/mainnet-getpeers.json?_=1678544254371",
-            "mainnet"
-        );
-        let response = await RPC.invokeRawScript(targetChain, script);
-
-        const d = new phantasmaJS.Decoder(response.result);
-        const soulMaster = d.readVmObject();
-
+        const response = await fetch('http://pharpc1.phantasma.io:7077/api/v1/GetOrganization?ID=masters');
+        let data = await response.json();
+        let soulMaster = data.members.length;
+        console.log(soulMaster);
         return soulMaster;
     }
+//         let sb = new phantasmaJS.ScriptBuilder();
+//         sb.CallContract("stake", "GetMasterCount", []);
+//         let script = sb.EndScript();
+//         let targetChain = "main";
+
+//         let RPC = new phantasmaJS.PhantasmaAPI(
+//             "https://pharpc1.phantasma.io:7077/rpc",
+//             "https://peers.phantasma.io/mainnet-getpeers.json?_=1678544254371",
+//             "mainnet"
+//         );
+//         let response = await RPC.invokeRawScript(targetChain, script);
+
+//         const d = new phantasmaJS.Decoder(response.result);
+//         const soulMaster = d.readVmObject();
+
+//         return soulMaster;
+//     }
 
     onMount(async () => {
         soulMaster = await getSoulMaster();
