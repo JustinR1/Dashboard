@@ -24,7 +24,7 @@
         }
         try {
             const response = await fetch(
-                `http://pharpc1.phantasma.io:7077/api/v1/LookUpName?name=${input}`
+                `https://pharpc1.phantasma.io:7077/api/v1/LookUpName?name=${input}`
             );
             const data = await response.json();
             console.log("API response:", data); // Add this line to log the response
