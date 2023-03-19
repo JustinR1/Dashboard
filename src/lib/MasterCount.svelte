@@ -11,7 +11,7 @@
         let targetChain = "main";
 
         let RPC = new phantasmaJS.PhantasmaAPI(
-            "http://pharpc1.phantasma.io:7077/rpc",
+            "https://pharpc1.phantasma.io:7077/rpc",
             "https://peers.phantasma.io/mainnet-getpeers.json?_=1678544254371",
             "mainnet"
         );
