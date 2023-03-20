@@ -32,13 +32,13 @@
             console.log("API response:", data); // Add this line to log the response
 
 
-            if (data.result && data) {
+            
+             if (data && data.startsWith("P")) {
                 return data;
             }
         } catch (error) {
             console.error(error);
         }
-
         // If the input is not a valid name, assume it's an address and return it directly
         return input;
     }
