@@ -26,7 +26,7 @@
             // const response = await fetch(
             //     `http://pharpc1.phantasma.io:7077/api/v1/LookUpName?name=${input}`
             // );
-            const proxyUrl3 = `/.netlify/functions/proxy3?name=${input}`;
+            const proxyUrl3 = `/.netlify/functions/proxy3?name=${input.toLowerCase()}`;
             let response = await fetch(proxyUrl3);
             let data = await response.json();
             console.log("API response:", data); // Add this line to log the response
