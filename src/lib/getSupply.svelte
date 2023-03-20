@@ -17,7 +17,7 @@
 //             const response = await fetch(
 //                 "http://pharpc1.phantasma.io:7077/api/v1/GetNexus?extended=true"
 //             );
-            const proxyUrl5 = '/.netlify/functions/proxy?extended=true';
+            const proxyUrl5 = '/.netlify/functions/proxy5?extended=true';
             const response = await fetch(proxyUrl5);
             const data = await response.json();
             let soul = data.tokens.find((token) => token.symbol === "SOUL");
