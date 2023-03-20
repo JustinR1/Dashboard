@@ -2,8 +2,8 @@ const axios = require("axios");
 
 exports.handler = async function (event, context) {
   try {
-    // const { name } = event.queryStringParameters;
-    const apiUrl = "http://pharpc1.phantasma.io:7077/api/v1/GetNexus?extended=true";
+    const { extended } = event.queryStringParameters;
+    const apiUrl = `http://pharpc1.phantasma.io:7077/api/v1/GetNexus?extended=${extended}`;
 
     
     console.log("Requesting data from:", apiUrl);
