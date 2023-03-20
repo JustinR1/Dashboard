@@ -12,7 +12,7 @@
 //             const response = await fetch(
 //                 "http://pharpc1.phantasma.io:7077/api/v1/GetOrganizationByName?name=stakers"
 //             );
-            const proxyUrl = '/.netlify/proxy/GetOrganizationByName?name=stakers';
+            const proxyUrl = '/.netlify/functions/proxy?name=stakers';
             let response = await fetch(proxyUrl);
             let stakers = await response.json();
             stakerMembers = stakers.members.length;
