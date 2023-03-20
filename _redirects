@@ -1,0 +1,1 @@
+/.netlify/proxy/*  http://pharpc1.phantasma.io:7077/api/v1/GetOrganizationByName/:splat 200
