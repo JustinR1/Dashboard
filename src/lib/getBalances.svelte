@@ -23,12 +23,14 @@
             return input;
         }
         try {
-            const response = await fetch(
-                `http://pharpc1.phantasma.io:7077/api/v1/LookUpName?name=${input}`
-            );
-            const data = await response.json();
+            // const response = await fetch(
+            //     `http://pharpc1.phantasma.io:7077/api/v1/LookUpName?name=${input}`
+            // );
+            const proxyUrl3 = '/.netlify/functions/proxy3';
+            let response = await fetch(proxyUrl3);
+            let data = await response.json();
             console.log("API response:", data); // Add this line to log the response
-
+            
             if (data.result && data) {
                 return data;
             }
@@ -57,9 +59,11 @@
                 accountName = "Not found";
                 return;
             }
-            const response = await fetch(
-                `http://pharpc1.phantasma.io:7077/api/v1/GetAccount?account=${resolvedAddress}`
-            );
+            // const response = await fetch(
+            //     `http://pharpc1.phantasma.io:7077/api/v1/GetAccount?account=${resolvedAddress}`
+            // );
+            const proxyUrl4 = '/.netlify/functions/proxy4';
+            const response = await fetch(proxyUrl4);
 
             // Getting balances
             const data = await response.json();
