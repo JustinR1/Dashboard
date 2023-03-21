@@ -24,7 +24,7 @@
         }
         try {
             const response = await fetch(
-                `https://bp1.phantasma.io/api/v1/LookUpName?name=${input}`);
+                `https://bp1.phantasma.io/api/v1/LookUpName?name=${input.toLowerCase()}`);
 //             const proxyUrl3 = `/.netlify/functions/proxy3?name=${input.toLowerCase()}`;
 //             let response = await fetch(proxyUrl3);
             let data = await response.json();
