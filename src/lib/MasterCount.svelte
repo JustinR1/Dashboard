@@ -5,20 +5,20 @@
     let soulMaster = "";
 
     async function getSoulMaster() {
-        const proxyUrl2 = '/.netlify/functions/proxy2';
-        let response = await fetch(proxyUrl2);
-        let data = await response.json();
-        let soulMaster = data.members.length;
-        console.log(soulMaster);
-        return soulMaster;
-//         const response = await fetch('http://pharpc1.phantasma.io:7077/api/v1/GetOrganization?ID=masters');
+//         const proxyUrl2 = '/.netlify/functions/proxy2';
+//         let response = await fetch(proxyUrl2);
 //         let data = await response.json();
 //         let soulMaster = data.members.length;
 //         console.log(soulMaster);
 //         return soulMaster;
+        const response = await fetch('https://bp1.phantasma.io/api/v1/GetOrganization?ID=masters');
+        let data = await response.json();
+        let soulMaster = data.members.length;
+        console.log(soulMaster);
+        return soulMaster;
        
     }
-//         SCRIPT ISSUES
+//         USING PHANTASMA-TS LIBRARY
 //         let sb = new phantasmaJS.ScriptBuilder();
 //         sb.CallContract("stake", "GetMasterCount", []);
 //         let script = sb.EndScript();
